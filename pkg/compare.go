@@ -72,7 +72,7 @@ func (c *comparer) compare(vid string, verbose bool) error {
 	if !respLeft.IsSucceed() {
 		return fmt.Errorf("left query: %s failed: %s", left, respLeft.GetErrorMsg())
 	}
-	respRight, err := c.client.Execute(left)
+	respRight, err := c.client.Execute(right)
 	if err != nil {
 		return err
 	}
